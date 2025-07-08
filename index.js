@@ -36,3 +36,13 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+window.addEventListener('load', () => {
+  if (window.location.hash === '#publications') {
+    // Delay ensures layout settles before scrolling
+    setTimeout(() => {
+      const el = document.querySelector('#publications');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+});
